@@ -1,0 +1,21 @@
+<section class="main-box">
+
+  <h2>Twój koszyk</h2>
+  <ul class="toy-list">
+
+    <li class="toy-list-item" *ngFor="let toy of chosenList">
+      <p class="cotail-name"> {{toy.name}} </p>
+      <p> ilosć: {{toy.quantity}} </p>
+      <button (click)="increaseQuantity(toy)">Dodaj</button>
+      <button (click)="decreaseQuantity(toy)">Odejmij</button>
+      <p> Wartosc: {{toy.price*toy.quantity}} </p>
+
+    </li>
+
+
+  </ul>
+
+  <button (click)="SumUp()" class="btn-sum">Suma</button>
+  <p class="sum">{{allPrice}}</p>
+
+</section>

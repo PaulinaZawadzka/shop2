@@ -1,0 +1,15 @@
+<section class="main-box">
+
+  <ul class="toy-list">
+    <li class="toy-list-item" *ngFor="let toy of toysList">
+      <p class="toy-name"> {{toy.name}}</p>
+      <div><img src="{{toy.imgSrc}}"></div>
+      <p>Cena: {{toy.price}}zł </p>
+      <button class="add-toy-button" (click)="addtoy(toy)">Dodaj</button>
+
+    </li>
+
+
+  </ul>
+
+</section>
